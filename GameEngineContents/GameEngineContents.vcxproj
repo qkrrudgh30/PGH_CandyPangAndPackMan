@@ -163,13 +163,61 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EndingLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="FirstMazeLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="PackMan.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PangManLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SecondMazeLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ThirdMazeLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TitleLevel.h">
       <SubType>
       </SubType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EndingLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="FirstMazeLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="PackMan.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="PangManLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SecondMazeLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ThirdMazeLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TitleLevel.cpp">
       <SubType>
       </SubType>
     </ClCompile>

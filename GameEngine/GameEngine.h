@@ -1,9 +1,11 @@
 // GameEngine.h
 
 #pragma once
+#include <map>
 #include <string>
 #include <GameEngineBase/GameEngineDebug.h>
 
+class GameEngineLevel;
 class GameEngine
 {
 public:
@@ -43,9 +45,23 @@ public:
         return *UserContents_;
     }
 
+    void ChangeLevel(const std::string& _Name);
+
 protected:
+    template<typename LevelType>
+    void CreateLevel(const std::string& _Name)
+    {
+        LevelType* NewLevel = new LevelType();
+        NewLevel->SetName(_Name);
+        GameEngineLevel* Level = NewLevel;
+        Level->Loading();
+        AllLevel_.insert(std::make_pair(_Name, NewLevel));
+    }
 
 private:
+    static std::map<std::string, GameEngineLevel*> AllLevel_;
+    static GameEngineLevel* CurrentLevel_;
+    static GameEngineLevel* NextLevel_;
     static GameEngine* UserContents_;
 
     static void WindowCreate();
