@@ -27,8 +27,13 @@ public:
         Inst_ = nullptr;
     }
 
+    GameEngineImage* Find(const std::string& _Name);
+
     GameEngineImage* Create(const std::string& _Name, const float4 _Scale);
     GameEngineImage* Create(const std::string& _Name, HDC _DC);
+
+    GameEngineImage* Load(const std::string& _Path);
+    GameEngineImage* Load(const std::string& _Path, const std::string& _Name);
 
 private:
     // constrcuter destructer
