@@ -3,11 +3,19 @@
 #include "GameEngine.h"
 #include <GameEngineBase/GameEngineWindow.h>
 #include "GameEngineLevel.h"
+#include "GameEngineImageManager.h"
 
 std::map<std::string, GameEngineLevel*> GameEngine::AllLevel_;
 GameEngineLevel* GameEngine::CurrentLevel_ = nullptr;
 GameEngineLevel* GameEngine::NextLevel_ = nullptr;
 GameEngine* GameEngine::UserContents_ = nullptr;
+GameEngineImage* GameEngine::BackBufferImage_ = nullptr;
+GameEngineImage* GameEngine::WindowMainImage_ = nullptr;
+
+HDC GameEngine::BackBufferDC()
+{
+    return BackBufferImage_->ImageDC();
+}
 
 GameEngine::GameEngine()
 {
@@ -39,12 +47,14 @@ void GameEngine::WindowCreate()
 void GameEngine::EngineInit()
 {
     UserContents_->GameInit();
+
+    WindowMainImage_ = GameEngineImageManager::GetInst()->Create("WindowMain", GameEngineWindow::GetHDC());
+    BackBufferImage_ = GameEngineImageManager::GetInst()->Create("BackBuffer", GameEngineWindow::GetScale());
 }
 void GameEngine::EngineLoop()
 {
     UserContents_->GameLoop();
 
-    // 시점함수
     if (nullptr != NextLevel_)
     {
         if (nullptr != CurrentLevel_)
@@ -60,6 +70,9 @@ void GameEngine::EngineLoop()
         }
 
         NextLevel_ = nullptr;
+
+        Rectangle(WindowMainImage_->ImageDC(), 0, 0, WindowMainImage_->GetScale().ix(), WindowMainImage_->GetScale().iy());
+        Rectangle(BackBufferImage_->ImageDC(), 0, 0, BackBufferImage_->GetScale().ix(), BackBufferImage_->GetScale().iy());
     }
 
     if (nullptr == CurrentLevel_)
@@ -68,6 +81,9 @@ void GameEngine::EngineLoop()
     }
 
     CurrentLevel_->Update();
+    CurrentLevel_->ActorUpdate();
+    CurrentLevel_->ActorRender();
+    WindowMainImage_->BitCopy(BackBufferImage_);
 }
 
 void GameEngine::EngineEnd()
@@ -86,6 +102,7 @@ void GameEngine::EngineEnd()
         delete StartIter->second;
     }
 
+    GameEngineImageManager::Destroy();
     GameEngineWindow::Destroy();
 }
 

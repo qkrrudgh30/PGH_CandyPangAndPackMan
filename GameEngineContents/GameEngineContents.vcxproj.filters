@@ -20,6 +20,12 @@
     <ClInclude Include="EndingLevel.h">
       <Filter>Levels\05_Ending</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Actors\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="BotUI.h">
+      <Filter>Actors\Global</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PackMan.cpp" />
@@ -40,6 +46,12 @@
     </ClCompile>
     <ClCompile Include="EndingLevel.cpp">
       <Filter>Levels\05_Ending</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Actors\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="BotUI.cpp">
+      <Filter>Actors\Global</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +75,30 @@
     </Filter>
     <Filter Include="Levels\05_Ending">
       <UniqueIdentifier>{4d1c11e1-f0da-437f-8a66-16de0cbd9363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors">
+      <UniqueIdentifier>{999608fc-5f3f-4aec-940d-ddcab7235c4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\00_Title">
+      <UniqueIdentifier>{4cc90476-e7ab-4d65-9c0c-804698190ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\01_PangMan">
+      <UniqueIdentifier>{b7bba8e9-efc9-4a79-9673-6d56e1de57b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\02_FirstMaze">
+      <UniqueIdentifier>{f276d71a-e205-490e-98f2-15729b6e5952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\03_SecondMaze">
+      <UniqueIdentifier>{997ed209-0c8e-4ac9-b3ed-31abf6b88565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\04_ThirdMaze">
+      <UniqueIdentifier>{8d7245e0-efa6-4a87-8015-2713e441f3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\05_Ending">
+      <UniqueIdentifier>{c672ab8f-d04b-42a2-8241-ce8841e82339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global">
+      <UniqueIdentifier>{2a00233d-8163-4915-963a-2df3bb26e0c2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

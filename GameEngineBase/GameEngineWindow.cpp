@@ -139,3 +139,16 @@ void GameEngineWindow::MessageLoop(void(*_InitFunction)(), void(*_LoopFunction)(
         _LoopFunction();
     }
 }
+
+void GameEngineWindow::SetWindowScaleAndPosition(float4 _Pos, float4 _Scale)
+{
+    // 메뉴바
+    RECT Rc = { 0, 0,  _Scale.ix(),  _Scale.iy() };
+
+    // 1280 + 메뉴바
+    AdjustWindowRect(&Rc, WS_OVERLAPPEDWINDOW, FALSE);
+
+    Scale_ = _Scale;
+
+    SetWindowPos(hWnd_, nullptr, _Pos.ix(), _Pos.iy(), Rc.right - Rc.left, Rc.bottom - Rc.top, SWP_NOZORDER);
+}
