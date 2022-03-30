@@ -2,6 +2,7 @@
 
 #pragma once
 #include <GameEngineBase/GameEngineNameObject.h>
+#include <GameEngineBase/GameEngineUpdateObject.h>
 #include <GameEngineBase/GameEngineMath.h>
 #include "GameEngineEnum.h"
 #include <list>
@@ -9,7 +10,7 @@
 // 설명 :
 class GameEngineRenderer;
 class GameEngineLevel;
-class GameEngineActor : public GameEngineNameObject
+class GameEngineActor : public GameEngineNameObject, public GameEngineUpdateObject
 {
 public:
     friend GameEngineLevel;
@@ -36,6 +37,11 @@ public:
     inline float4 GetScale()
     {
         return Scale_;
+    }
+
+    inline void SetMove(float4 _Value)
+    {
+        Position_ += _Value;
     }
 
     inline void SetPosition(float4 _Value)
@@ -66,8 +72,6 @@ private:
     }
 
 public:
-    // GameEngineRenderer* CreateRenderer(RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
-
     GameEngineRenderer* CreateRenderer(const std::string& _Image, RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
 
     GameEngineRenderer* CreateRendererToScale(const std::string& _Image, const float4& _Scale, RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
@@ -75,7 +79,6 @@ public:
     void Renderering();
 
 private:
-    // 이터레이터
     std::list<GameEngineRenderer*>::iterator StartRenderIter;
     std::list<GameEngineRenderer*>::iterator EndRenderIter;
 

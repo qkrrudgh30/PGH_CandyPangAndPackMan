@@ -1,8 +1,8 @@
 // GameEngineActor.cpp
 
 #include "GameEngineActor.h"
-#include <GameEngineBase/GameEngineWindow.h>
 #include <GameEngine/GameEngine.h>
+#include <GameEngineBase/GameEngineWindow.h>
 #include <GameEngine/GameEngineRenderer.h>
 
 GameEngineActor::GameEngineActor()
@@ -40,20 +40,6 @@ void GameEngineActor::DebugRectRender()
         DebugRect.CenterBot()
     );
 }
-/*
-GameEngineRenderer* GameEngineActor::CreateRenderer(RenderPivot _PivotType, const float4& _PivotPos)
-{
-    GameEngineRenderer* NewRenderer = new GameEngineRenderer();
-
-    NewRenderer->SetActor(this);
-    // NewRenderer->SetImageScale();
-    NewRenderer->SetPivot(_PivotPos);
-    NewRenderer->SetType(_PivotType);
-
-    RenderList_.push_back(NewRenderer);
-    return NewRenderer;
-}
-*/
 
 GameEngineRenderer* GameEngineActor::CreateRenderer(
     const std::string& _Image,

@@ -26,6 +26,9 @@
     <ClInclude Include="BotUI.h">
       <Filter>Actors\Global</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Actors\Global</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PackMan.cpp" />
@@ -51,6 +54,9 @@
       <Filter>Actors\Global</Filter>
     </ClCompile>
     <ClCompile Include="BotUI.cpp">
+      <Filter>Actors\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
       <Filter>Actors\Global</Filter>
     </ClCompile>
   </ItemGroup>

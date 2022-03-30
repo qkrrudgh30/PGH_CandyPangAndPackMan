@@ -62,6 +62,7 @@ private:
 
     void ActorUpdate();
     void ActorRender();
+    void ActorRelease();
 
 };
 

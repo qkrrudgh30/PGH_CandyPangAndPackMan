@@ -167,6 +167,7 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="EndingLevel.h">
       <SubType>
       </SubType>
@@ -205,6 +206,7 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="EndingLevel.cpp">
       <SubType>
       </SubType>

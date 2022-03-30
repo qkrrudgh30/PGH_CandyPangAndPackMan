@@ -54,6 +54,12 @@ void GameEngineLevel::ActorUpdate()
 
         for (; StartActor != EndActor; ++StartActor)
         {
+            (*StartActor)->ReleaseUpdate();
+            if (false == (*StartActor)->IsUpdate())
+            {
+                continue;
+            }
+
             (*StartActor)->Update();
         }
     }
@@ -79,6 +85,11 @@ void GameEngineLevel::ActorRender()
 
         for (; StartActor != EndActor; ++StartActor)
         {
+            if (false == (*StartActor)->IsUpdate())
+            {
+                continue;
+            }
+
             (*StartActor)->Renderering();
         }
 
@@ -87,7 +98,43 @@ void GameEngineLevel::ActorRender()
 
         for (; StartActor != EndActor; ++StartActor)
         {
+            if (false == (*StartActor)->IsUpdate())
+            {
+                continue;
+            }
+
             (*StartActor)->Render();
+        }
+    }
+}
+
+void GameEngineLevel::ActorRelease()
+{
+    std::map<int, std::list<GameEngineActor*>>::iterator GroupStart;
+    std::map<int, std::list<GameEngineActor*>>::iterator GroupEnd;
+
+    std::list<GameEngineActor*>::iterator StartActor;
+    std::list<GameEngineActor*>::iterator EndActor;
+
+    GroupStart = AllActor_.begin();
+    GroupEnd = AllActor_.end();
+
+    for (; GroupStart != GroupEnd; ++GroupStart)
+    {
+        std::list<GameEngineActor*>& Group = GroupStart->second;
+
+        StartActor = Group.begin();
+        EndActor = Group.end();
+        for (; StartActor != EndActor; )
+        {
+            if (true == (*StartActor)->IsDeath())
+            {
+                delete* StartActor;
+                StartActor = Group.erase(StartActor);
+                continue;
+            }
+
+            ++StartActor;
         }
     }
 }
