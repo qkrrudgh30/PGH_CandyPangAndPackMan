@@ -29,6 +29,21 @@
     <ClInclude Include="Bullet.h">
       <Filter>Actors\Global</Filter>
     </ClInclude>
+    <ClInclude Include="FirstMazeTile.h">
+      <Filter>Actors\02_FirstMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondMazeTile.h">
+      <Filter>Actors\03_SecondMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdMazeTile.h">
+      <Filter>Actors\04_ThirdMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleLogo.h">
+      <Filter>Actors\00_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleHelp.h">
+      <Filter>Actors\00_Title</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PackMan.cpp" />
@@ -58,6 +73,21 @@
     </ClCompile>
     <ClCompile Include="Bullet.cpp">
       <Filter>Actors\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstMazeTile.cpp">
+      <Filter>Actors\02_FirstMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondMazeTile.cpp">
+      <Filter>Actors\03_SecondMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdMazeTile.cpp">
+      <Filter>Actors\04_ThirdMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleLogo.cpp">
+      <Filter>Actors\00_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleHelp.cpp">
+      <Filter>Actors\00_Title</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
