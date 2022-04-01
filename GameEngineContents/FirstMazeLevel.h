@@ -25,6 +25,7 @@ protected:
     void LevelChangeEnd() override;
 
 private:
+    float CameraSpeed_;
 
 };
 

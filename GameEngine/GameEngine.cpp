@@ -55,6 +55,7 @@ void GameEngine::EngineInit()
 }
 void GameEngine::EngineLoop()
 {
+    Rectangle(BackBufferImage_->ImageDC(), 0, 0, BackBufferImage_->GetScale().ix(), BackBufferImage_->GetScale().iy()); // 삭제 필수. Contents Programmer가 추가함.
     GameEngineTime::GetInst()->Update();
 
     UserContents_->GameLoop();
@@ -90,7 +91,9 @@ void GameEngine::EngineLoop()
     CurrentLevel_->Update();
     CurrentLevel_->ActorUpdate();
     CurrentLevel_->ActorRender();
+    CurrentLevel_->CollisionDebugRender();
     WindowMainImage_->BitCopy(BackBufferImage_);
+
     CurrentLevel_->ActorRelease();
 
 }

@@ -1,16 +1,21 @@
 // GameEngineLevel.h
 
 #pragma once
-#include "GameEngineBase/GameEngineNameObject.h"
 #include <list>
 #include <map>
+#include <GameEngineBase/GameEngineNameObject.h>
+#include <GameEngineBase/GameEngineMath.h>
 
 // Ό³Έν :
 class GameEngine;
 class GameEngineActor;
+class GameEngineCollision;
 class GameEngineLevel : public GameEngineNameObject
 {
     friend GameEngine;
+    friend GameEngineActor;
+    friend GameEngineCollision;
+
 public:
     // constrcuter destructer
     GameEngineLevel();
@@ -51,6 +56,21 @@ public:
         return NewActor;
     }
 
+    inline float4 GetCameraPos()
+    {
+        return CameraPos_;
+    }
+
+    inline void MoveCameraPos(const float4& _Value)
+    {
+        CameraPos_ += _Value;
+    }
+
+    inline void SetCameraPos(const float4& _Value)
+    {
+        CameraPos_ = _Value;
+    }
+
 protected:
     virtual void Loading() = 0;
     virtual void Update() = 0;
@@ -60,9 +80,16 @@ protected:
 private:
     std::map<int, std::list<GameEngineActor*>> AllActor_;
 
+    float4 CameraPos_;
+
     void ActorUpdate();
     void ActorRender();
+    void CollisionDebugRender();
     void ActorRelease();
 
+private:
+    std::map<std::string, std::list<GameEngineCollision*>> AllCollision_;
+
+    void AddCollision(const std::string& _GroupName, GameEngineCollision* _Collision);
 };
 

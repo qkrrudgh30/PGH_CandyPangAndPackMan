@@ -169,3 +169,40 @@ void GameEngineImage::TransCopy(GameEngineImage* _Other, const float4& _CopyPos,
         _TransColor
     );
 }
+
+void GameEngineImage::CutCount(int _x, int _y)
+{
+    float4 Scale = { GetScale().x / _x, GetScale().y / _y };
+    Cut(Scale);
+}
+
+void GameEngineImage::Cut(const float4& _CutSize)
+{
+    if (0 != (GetScale().ix() % _CutSize.ix()))
+    {
+        MsgBoxAssert("자를수 있는 수치가 딱 맞아떨어지지 않습니다.");
+    }
+
+    if (0 != (GetScale().iy() % _CutSize.iy()))
+    {
+        MsgBoxAssert("자를수 있는 수치가 딱 맞아떨어지지 않습니다.");
+    }
+
+    int XCount = GetScale().ix() / _CutSize.ix();
+    int YCount = GetScale().iy() / _CutSize.iy();
+
+    for (int y = 0; y < YCount; y++)
+    {
+        for (int x = 0; x < XCount; x++)
+        {
+            CutPivot_.push_back({ static_cast<float>(x * _CutSize.ix()), static_cast<float>(y * _CutSize.iy()) });
+            CutScale_.push_back(_CutSize);
+        }
+    }
+
+}
+
+int GameEngineImage::GetImagePixel(int _x, int _y)
+{
+    return GetPixel(ImageDC_, _x, _y);
+}

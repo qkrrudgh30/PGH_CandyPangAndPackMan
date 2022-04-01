@@ -21,6 +21,7 @@ protected:
 
 private:
     float Speed_;
+    GameEngineRenderer* Render_;
 
     void Start() override;
     void Update() override;

@@ -1,6 +1,7 @@
 // GameEngineActor.h
 
 #pragma once
+#include "GameEngineLevel.h"
 #include <GameEngineBase/GameEngineNameObject.h>
 #include <GameEngineBase/GameEngineUpdateObject.h>
 #include <GameEngineBase/GameEngineMath.h>
@@ -8,8 +9,9 @@
 #include <list>
 
 // Ό³Έν :
-class GameEngineRenderer;
 class GameEngineLevel;
+class GameEngineRenderer;
+class GameEngineCollision;
 class GameEngineActor : public GameEngineNameObject, public GameEngineUpdateObject
 {
 public:
@@ -28,6 +30,11 @@ public:
     inline GameEngineLevel* GetLevel()
     {
         return Level_;
+    }
+
+    inline float4 GetCameraEffectPosition()
+    {
+        return Position_ - GetLevel()->GetCameraPos();
     }
 
     inline float4 GetPosition()
@@ -58,6 +65,7 @@ protected:
     virtual void Start() = 0;
     virtual void Update() {}
     virtual void Render() {}
+    void Release();
 
     void DebugRectRender();
 
@@ -72,6 +80,8 @@ private:
     }
 
 public:
+    GameEngineRenderer* CreateRenderer(RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
+
     GameEngineRenderer* CreateRenderer(const std::string& _Image, RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
 
     GameEngineRenderer* CreateRendererToScale(const std::string& _Image, const float4& _Scale, RenderPivot _PivotType = RenderPivot::CENTER, const float4& _PivotPos = { 0,0 });
@@ -84,5 +94,9 @@ private:
 
     std::list<GameEngineRenderer*> RenderList_;
 
+public:
+    GameEngineCollision* CreateCollision(const std::string& _GroupName, float4 _Scale, float4 _Pivot = { 0, 0 });
 
+private:
+    std::list<GameEngineCollision*> CollisionList_;
 };

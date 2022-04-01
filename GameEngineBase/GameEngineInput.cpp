@@ -4,7 +4,7 @@
 #include "GameEngineDebug.h"
 #include "GameEngineString.h"
 
-void GameEngineInput::GameEngineKey::Update()
+void GameEngineInput::GameEngineKey::Update(float _DeltaTime)
 {
     if (true == KeyCheck())
     {
@@ -14,6 +14,7 @@ void GameEngineInput::GameEngineKey::Update()
             Press_ = true;
             Up_ = false;
             Free_ = false;
+            Time_ += _DeltaTime;
         }
         else if (true == Press_)
         {
@@ -21,6 +22,7 @@ void GameEngineInput::GameEngineKey::Update()
             Press_ = true;
             Up_ = false;
             Free_ = false;
+            Time_ += _DeltaTime;
         }
     }
     else
@@ -31,6 +33,7 @@ void GameEngineInput::GameEngineKey::Update()
             Press_ = false;
             Up_ = true;
             Free_ = false;
+            Time_ = 0.0f;
         }
         else if (true == Up_)
         {
@@ -84,7 +87,7 @@ void GameEngineInput::CreateKey(const std::string& _Name, int _Key)
     AllInputKey_[UpperKey].Reset();
 }
 
-void GameEngineInput::Update()
+void GameEngineInput::Update(float _DeltaTime)
 {
     std::map<std::string, GameEngineKey>::iterator KeyUpdateStart = AllInputKey_.begin();
     std::map<std::string, GameEngineKey>::iterator KeyUpdateEnd = AllInputKey_.end();
@@ -93,8 +96,21 @@ void GameEngineInput::Update()
     {
         GameEngineKey& CurrentKey = KeyUpdateStart->second;
 
-        CurrentKey.Update();
+        CurrentKey.Update(_DeltaTime);
     }
+}
+
+float GameEngineInput::GetTime(const std::string& _Name)
+{
+    std::string UpperKey = GameEngineString::ToUpperReturn(_Name);
+
+    if (AllInputKey_.end() == AllInputKey_.find(UpperKey))
+    {
+        MsgBoxAssert("존재하지 않는 키 입니다.");
+        return false;
+    }
+
+    return AllInputKey_[UpperKey].Time_;
 }
 
 bool GameEngineInput::IsDown(const std::string& _Name)
