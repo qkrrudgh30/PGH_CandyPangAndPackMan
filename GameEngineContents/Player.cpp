@@ -25,17 +25,17 @@ Player::~Player()
 void Player::Start()
 {
     SetPosition(GameEngineWindow::GetScale().Half());
-    SetScale({ 100, 100 });
+    SetScale({ 32, 32 });
 
     Render_ = CreateRenderer("Player.bmp", RenderPivot::CENTER, { 0, 0});
-    Render_->GetImage()->Cut({100, 100});
-    Render_->CreateAnimation("Player.bmp", "PlayerUp", 0, 9, 0.1f);
-    Render_->CreateAnimation("Player.bmp", "PlayerDown", 10, 19, 0.1f);
-    Render_->CreateAnimation("Player.bmp", "PlayerLeft", 20, 29, 0.1f);
-    Render_->CreateAnimation("Player.bmp", "PlayerRight", 30, 39, 0.1f);
+    Render_->GetImage()->Cut({32, 32});
+    Render_->CreateAnimation("Player.bmp", "PlayerUp", 0, 13, 0.05f);
+    Render_->CreateAnimation("Player.bmp", "PlayerDown", 14, 27, 0.05f);
+    Render_->CreateAnimation("Player.bmp", "PlayerLeft", 28, 41, 0.05f);
+    Render_->CreateAnimation("Player.bmp", "PlayerRight", 42, 55, 0.05f);
     Render_->ChangeAnimation("PlayerRight");
 
-    CreateCollision("Player", { 50, 50 }, {0, 100});
+    CreateCollision("Player", { 32, 32 }, {0, 100});
 
     if (false == GameEngineInput::GetInst()->IsKey("MoveLeft"))
     {
@@ -70,6 +70,7 @@ void Player::Update()
         Render_->ChangeAnimation("PlayerDown");
         SetMove(float4::DOWN * GameEngineTime::GetDeltaTime() * Speed_);
     }
+    
 
     if (true == GameEngineInput::GetInst()->IsDown("Fire"))
     {

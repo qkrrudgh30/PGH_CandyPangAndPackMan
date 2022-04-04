@@ -27,7 +27,7 @@ void PackMan::GameInit()
     GameEngineWindow::GetInst().SetWindowScaleAndPosition({ 100, 100 }, { 1280, 720 });
 
     GameEngineDirectory ResourcesDir;
-    ResourcesDir.MoveParent("Practice");
+    ResourcesDir.MoveParent("Latest");
     ResourcesDir.Move("Resources");
     ResourcesDir.Move("Image");
 

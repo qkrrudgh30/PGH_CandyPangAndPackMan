@@ -3,6 +3,7 @@
 #pragma once
 
 #include <GameEngine/GameEngineLevel.h>
+#include <vector>
 
 // Ό³Έν :
 class PangManLevel : public GameEngineLevel
@@ -25,6 +26,17 @@ protected:
     void LevelChangeEnd() override;
 
 private:
+    size_t PangMapRowSize_;
+    size_t PangMapColSize_;
+    int PangMap_[22][22];
+    int PangVisitMap_[22][22];
+    int PangDir_[4][2] = { {-1, 0}, {1, 0}, {0, -1}, {0, 1} };
+    int CurrMouseRow;
+    int CurrMouseCol;
+
+    void ShufflePangMap(void);
+    void DrawPangMap(void);
+    void BFSPang(int CurrRow, int CurrCol);
 
 };
 

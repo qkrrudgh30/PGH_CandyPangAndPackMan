@@ -46,6 +46,17 @@ public:
         return Inst_->Scale_;
     }
 
+    static inline float4 GetMousePos()
+    {
+        return MousePosition_;
+    }
+
+    static void SetMousePos(float _MouseX, float _MouseY)
+    {
+        MousePosition_.x = _MouseX;
+        MousePosition_.y = _MouseY;
+    }
+
 protected:
 
 private:
@@ -55,6 +66,8 @@ private:
     HWND hWnd_;
     HDC HDC_;
     float4 Scale_;
+
+    static float4 MousePosition_;
 
     // constrcuter destructer
     GameEngineWindow();

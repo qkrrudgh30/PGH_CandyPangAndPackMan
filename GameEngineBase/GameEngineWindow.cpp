@@ -2,6 +2,9 @@
 
 #include "GameEngineWindow.h"
 #include "GameEngineDebug.h"
+#include "GameEngineMath.h"
+
+float4 GameEngineWindow::MousePosition_ = float4::ZERO;
 
 LRESULT CALLBACK MessageProcess(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -24,6 +27,10 @@ LRESULT CALLBACK MessageProcess(HWND hWnd, UINT message, WPARAM wParam, LPARAM l
         GameEngineWindow::GetInst().Off();
         break;
     }
+    case WM_LBUTTONDOWN:
+        GameEngineWindow::SetMousePos((float)LOWORD(lParam), (float)HIWORD(lParam));
+        break;
+
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
     }

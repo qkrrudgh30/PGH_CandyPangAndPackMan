@@ -20,15 +20,6 @@
     <ClInclude Include="EndingLevel.h">
       <Filter>Levels\05_Ending</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Actors\Global</Filter>
-    </ClInclude>
-    <ClInclude Include="BotUI.h">
-      <Filter>Actors\Global</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>Actors\Global</Filter>
-    </ClInclude>
     <ClInclude Include="FirstMazeTile.h">
       <Filter>Actors\02_FirstMaze</Filter>
     </ClInclude>
@@ -43,6 +34,39 @@
     </ClInclude>
     <ClInclude Include="TitleHelp.h">
       <Filter>Actors\00_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Actors\Global\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Actors\Global\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="BotUI.h">
+      <Filter>Actors\Global\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAstar.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterBFS.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterRightHand.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyPlayer.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyAStar.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyBFS.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyRightHand.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="PackManMap.h">
+      <Filter>Actors\Global\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -65,15 +89,6 @@
     <ClCompile Include="EndingLevel.cpp">
       <Filter>Levels\05_Ending</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Actors\Global</Filter>
-    </ClCompile>
-    <ClCompile Include="BotUI.cpp">
-      <Filter>Actors\Global</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Actors\Global</Filter>
-    </ClCompile>
     <ClCompile Include="FirstMazeTile.cpp">
       <Filter>Actors\02_FirstMaze</Filter>
     </ClCompile>
@@ -88,6 +103,39 @@
     </ClCompile>
     <ClCompile Include="TitleHelp.cpp">
       <Filter>Actors\00_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Actors\Global\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Actors\Global\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="BotUI.cpp">
+      <Filter>Actors\Global\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAstar.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterBFS.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterRightHand.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyPlayer.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyAStar.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyBFS.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyRightHand.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="PackManMap.cpp">
+      <Filter>Actors\Global\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +183,15 @@
     </Filter>
     <Filter Include="Actors\Global">
       <UniqueIdentifier>{2a00233d-8163-4915-963a-2df3bb26e0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\Player">
+      <UniqueIdentifier>{ea45c991-476e-4c7f-b956-51beb61f8be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\Monster">
+      <UniqueIdentifier>{e1c08b5c-f1d3-4096-b36a-4bcc1c1fe9a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\UI">
+      <UniqueIdentifier>{12c215e3-c52a-486e-828a-0dce9552cabd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

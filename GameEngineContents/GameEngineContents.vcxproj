@@ -168,6 +168,22 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="DummyAStar.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyBFS.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyPlayer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyRightHand.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="EndingLevel.h">
       <SubType>
       </SubType>
@@ -180,7 +196,23 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="MonsterAstar.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MonsterBFS.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MonsterRightHand.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="PackMan.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PackManMap.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -227,6 +259,22 @@
       </SubType>
     </ClCompile>
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="DummyAStar.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyBFS.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyPlayer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyRightHand.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="EndingLevel.cpp">
       <SubType>
       </SubType>
@@ -239,7 +287,23 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="MonsterAstar.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MonsterBFS.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MonsterRightHand.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="PackMan.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="PackManMap.cpp">
       <SubType>
       </SubType>
     </ClCompile>
