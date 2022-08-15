@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="PackMan.h" />
+    <ClInclude Include="TitleLevel.h">
+      <Filter>Levels\00_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstMazeLevel.h">
+      <Filter>Levels\02_FirstMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="PangManLevel.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondMazeLevel.h">
+      <Filter>Levels\03_SecondMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdMazeLevel.h">
+      <Filter>Levels\04_ThirdMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingLevel.h">
+      <Filter>Levels\05_Ending</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstMazeTile.h">
+      <Filter>Actors\02_FirstMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondMazeTile.h">
+      <Filter>Actors\03_SecondMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdMazeTile.h">
+      <Filter>Actors\04_ThirdMaze</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleLogo.h">
+      <Filter>Actors\00_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleHelp.h">
+      <Filter>Actors\00_Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Actors\Global\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Actors\Global\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="BotUI.h">
+      <Filter>Actors\Global\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAstar.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterBFS.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterRightHand.h">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyPlayer.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyAStar.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyBFS.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyRightHand.h">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClInclude>
+    <ClInclude Include="PackManMap.h">
+      <Filter>Actors\Global\UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PackMan.cpp" />
+    <ClCompile Include="TitleLevel.cpp">
+      <Filter>Levels\00_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstMazeLevel.cpp">
+      <Filter>Levels\02_FirstMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="PangManLevel.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondMazeLevel.cpp">
+      <Filter>Levels\03_SecondMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdMazeLevel.cpp">
+      <Filter>Levels\04_ThirdMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingLevel.cpp">
+      <Filter>Levels\05_Ending</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstMazeTile.cpp">
+      <Filter>Actors\02_FirstMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondMazeTile.cpp">
+      <Filter>Actors\03_SecondMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdMazeTile.cpp">
+      <Filter>Actors\04_ThirdMaze</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleLogo.cpp">
+      <Filter>Actors\00_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleHelp.cpp">
+      <Filter>Actors\00_Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Actors\Global\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Actors\Global\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="BotUI.cpp">
+      <Filter>Actors\Global\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterAstar.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterBFS.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterRightHand.cpp">
+      <Filter>Actors\Global\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyPlayer.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyAStar.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyBFS.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyRightHand.cpp">
+      <Filter>Levels\01_PangMan</Filter>
+    </ClCompile>
+    <ClCompile Include="PackManMap.cpp">
+      <Filter>Actors\Global\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{f7cc84e3-e8ea-424c-bafd-303a18592d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\00_Title">
+      <UniqueIdentifier>{a363e453-6603-4c40-81c9-d1eb2021ab10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\03_SecondMaze">
+      <UniqueIdentifier>{9d5abc24-f760-4134-af98-93ace8889b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\01_PangMan">
+      <UniqueIdentifier>{9086b627-f5b0-430f-9e14-09e4f23405a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\02_FirstMaze">
+      <UniqueIdentifier>{123c0719-d809-4074-aa6d-51b4c58ddc8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\04_ThirdMaze">
+      <UniqueIdentifier>{f77d68c7-6ce8-4b80-a164-ac8476ce8ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\05_Ending">
+      <UniqueIdentifier>{4d1c11e1-f0da-437f-8a66-16de0cbd9363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors">
+      <UniqueIdentifier>{999608fc-5f3f-4aec-940d-ddcab7235c4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\00_Title">
+      <UniqueIdentifier>{4cc90476-e7ab-4d65-9c0c-804698190ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\01_PangMan">
+      <UniqueIdentifier>{b7bba8e9-efc9-4a79-9673-6d56e1de57b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\02_FirstMaze">
+      <UniqueIdentifier>{f276d71a-e205-490e-98f2-15729b6e5952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\03_SecondMaze">
+      <UniqueIdentifier>{997ed209-0c8e-4ac9-b3ed-31abf6b88565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\04_ThirdMaze">
+      <UniqueIdentifier>{8d7245e0-efa6-4a87-8015-2713e441f3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\05_Ending">
+      <UniqueIdentifier>{c672ab8f-d04b-42a2-8241-ce8841e82339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global">
+      <UniqueIdentifier>{2a00233d-8163-4915-963a-2df3bb26e0c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\Player">
+      <UniqueIdentifier>{ea45c991-476e-4c7f-b956-51beb61f8be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\Monster">
+      <UniqueIdentifier>{e1c08b5c-f1d3-4096-b36a-4bcc1c1fe9a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actors\Global\UI">
+      <UniqueIdentifier>{12c215e3-c52a-486e-828a-0dce9552cabd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
